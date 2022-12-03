@@ -26,14 +26,6 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.add_box_outlined),
-              title: const Text('Contador'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.of(context).pushNamed('/contador');
-              },
-            ),
-            ListTile(
               leading: const Icon(Icons.help),
               title: const Text('Sobre'),
               onTap: () {
@@ -47,6 +39,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).pushNamed('/consultasListPage');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_pin_outlined),
+              title: const Text('Pets SQLite'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/petsListPage');
               },
             ),
           ],
@@ -67,6 +67,12 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed('/consultasListPage');
               },
               child: const Text('Consultas SQLite'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/petsListPage');
+              },
+              child: const Text('Pets SQLite'),
             ),
           ],
         ),

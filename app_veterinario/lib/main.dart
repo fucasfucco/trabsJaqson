@@ -2,6 +2,7 @@ import 'package:app_veterinario/pages/contador.dart';
 import 'package:app_veterinario/pages/home.dart';
 import 'package:app_veterinario/pages/sobre.dart';
 import 'package:app_veterinario/sqlite/consultas_list_page.dart';
+import 'package:app_veterinario/sqlite/pet_list_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/sobre': (context) => const SobrePage(),
         '/consultasListPage': (context) =>
             const ConsultasListPage(title: "Consultas SQLite"),
+        '/petsListPage': (context) => const PetsListPage(title: "Pets SQLite"),
       },
     );
   }
